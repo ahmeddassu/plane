@@ -6,13 +6,13 @@ This repository contains all the resources and code needed for our school’s pl
 
 This repository is organised into folders and subfolders, each with a specific purpose:
 
-1. Logic
+### 1. Logic
 
 This folder contains all the core logic and code for the project.
 - Simulation -> This subfolder contains the code for simulating the project, including trajectory calculations, graph plotting, and data analysis to determine the optimal conditions and features for the plane.
 - Flight -> This subfolder holds all code related to the plane’s direct functionality, such as wing deployment, parabolic height detection, and stabilisation mechanisms (if within scope).
 
-2. Docs
+### 2. Docs
 
 This folder provides detailed and user-friendly documentation for all the files in `/Logic`. It mirrors the structure of the `/Logic` folder and offers clear explanations of how and why the code works.
 
