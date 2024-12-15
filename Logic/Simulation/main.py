@@ -31,3 +31,34 @@ print(f"velocity on the y: {yvelocity:.3f} m/s")
 # calculating the local maximum of the parabola
 hmax = (v0 * np.sin(radangle))**2 / (2 * gravity)
 print(f"maximum height: {hmax:.3f} meters")
+
+# generate points in time, which are spaced between the total flight time and 0 at regular intervals
+timepoints = np.linspace(0, time, 100)
+
+# initialising empty lists to store x and y coordinates
+xpositions = []
+ypositions = []
+
+# going through each point in time, and calculating the x and y coordinates
+for t in timepoints:
+    x = xvelocity * t
+    y = yvelocity * t - 0.5 * gravity * t ** 2
+    xpositions.append(x)
+    ypositions.append(y)
+
+# plotting the trajectory
+plt.figure(figsize=(14, 6))
+plt.plot(xpositions, ypositions, label="trajectory", color="purple")
+plt.title("plane parabola")
+plt.xlabel("horizontal distance (m)")
+plt.ylabel("verical distance (m)")
+
+plt.show()
+
+
+'''
+TO DO:
+1. Make an x, y easy viewer
+2. Find glide distances?
+3. Add mass and air resistance if possible
+'''
