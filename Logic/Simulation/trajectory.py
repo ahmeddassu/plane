@@ -45,7 +45,7 @@ ypositions = []
 # going through each point in time, and calculating the x and y coordinates
 for t in timepoints:
     x = xvelocity * t
-    y = yvelocity * t - 0.5 * gravity * t ** 2
+    y = (yvelocity * t - 0.5 * gravity * t ** 2) + height
     
     altitude = y
     
